@@ -1,7 +1,8 @@
 import React from 'react';
-import Cpj from './cpj'
+import Cpj from './cpj';
+import Lq from './lq/lq';
 import './App.css';
-import Lq from './lq/lq'
+
 
 function App() {
   return (
