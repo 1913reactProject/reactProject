@@ -1,17 +1,28 @@
-import React from 'react';
-import Cpj from './cpj';
-import Lq from './lq/lq';
-import './App.css';
+import React,{Component} from "react"
 
+// import {connect} from "react-redux"
+import {Switch, Redirect} from "react-router-dom"
+import renderRoutes from "@utils/renderRoutes"
+import {baseConfigRoute} from "@router"
 
-function App() {
-  return (
-      
-    <div className="App">
-      <Lq></Lq>
-      <Cpj></Cpj>
-    </div>
-  );
+export default class App extends Component{
+    render(){
+        return(
+            // 注意，根路径/ 重定向到 home页面 时，要放在后面写
+            <Switch>
+                {renderRoutes(baseConfigRoute)}
+                <Redirect to="/home"/>   
+            </Switch>
+        )
+    }
 }
 
-export default App;
+
+// const mapStateToProps = (state) => ({  
+// })
+
+// const mapDispatchToProps = (dispatch) => ({
+    
+// })
+
+// export default connect(mapStateToProps,mapDispatchToProps)(App)
