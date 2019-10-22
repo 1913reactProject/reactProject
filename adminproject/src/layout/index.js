@@ -1,16 +1,23 @@
 import React, { Component } from "react"
 
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu } from 'antd';
+
+import renderTabbar from "@utils/renderTabbar"
+import {layoutRoute} from "@router"
+
+import {withRouter} from "react-router-dom"
+
 const { Header, Content, Footer, Sider } = Layout;
 
 
 
-export default class LayoutComponent extends Component {
+class LayoutComponent extends Component {
     render() {
         console.log(this.props.children)
         return (
             <div>
                 <Layout>
+                    {/* 左边的tabBar */}
                     <Sider
                         style={{
                             overflow: 'auto',
@@ -20,41 +27,37 @@ export default class LayoutComponent extends Component {
                         }}
                     >
                         <div className="logo" />
-                        <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
-                            <Menu.Item key="1">
+                        <Menu theme="dark" mode="inline" defaultSelectedKeys={['/home']} onClick={this.handleTo.bind(this)}>
+
+                            {renderTabbar(layoutRoute)}
+                            {/* 一级标题 */}
+                            {/* <Menu.Item key="1">
                                 <Icon type="user" />
                                 <span className="nav-text">nav 1</span>
                             </Menu.Item>
                             <Menu.Item key="2">
                                 <Icon type="video-camera" />
                                 <span className="nav-text">nav 2</span>
-                            </Menu.Item>
-                            <Menu.Item key="3">
-                                <Icon type="upload" />
-                                <span className="nav-text">nav 3</span>
-                            </Menu.Item>
-                            <Menu.Item key="4">
-                                <Icon type="bar-chart" />
-                                <span className="nav-text">nav 4</span>
-                            </Menu.Item>
-                            <Menu.Item key="5">
-                                <Icon type="cloud-o" />
-                                <span className="nav-text">nav 5</span>
-                            </Menu.Item>
-                            <Menu.Item key="6">
-                                <Icon type="appstore-o" />
-                                <span className="nav-text">nav 6</span>
-                            </Menu.Item>
-                            <Menu.Item key="7">
-                                <Icon type="team" />
-                                <span className="nav-text">nav 7</span>
-                            </Menu.Item>
-                            <Menu.Item key="8">
-                                <Icon type="shop" />
-                                <span className="nav-text">nav 8</span>
-                            </Menu.Item>
+                            </Menu.Item> */}
+
+                                    {/* 二级标题 */}
+                                    {/* <SubMenu
+                                        key="sub1"
+                                        title={
+                                        <span>
+                                            <Icon type="mail" />
+                                            <span>Navigation One</span>
+                                        </span>
+                                        }
+                                    >
+                                        <Menu.Item key="5">Option 5</Menu.Item>
+                                        <Menu.Item key="6">Option 6</Menu.Item>
+                                        <Menu.Item key="7">Option 7</Menu.Item>
+                                        <Menu.Item key="8">Option 8</Menu.Item>
+                                    </SubMenu> */}
                         </Menu>
                     </Sider>
+                    {/* 右边的内容区 */} 
                     <Layout style={{ marginLeft: 200 }}>
                         <Header style={{ background: '#fff', padding: 0 }} />
                         <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
@@ -69,4 +72,21 @@ export default class LayoutComponent extends Component {
             </div>
         )
     }
+    // handleTo(...rest){
+    //     console.log(rest)
+    //     console.log(rest[0].key)
+    // }
+    handleTo({key}){
+        // console.log(key)
+        // console.log(this.props)
+        this.props.history.push(key)
+    }
+
+
+
 }
+
+
+export default withRouter(LayoutComponent)
+
+
