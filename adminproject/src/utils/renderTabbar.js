@@ -1,5 +1,5 @@
 import React from "react"
-
+import './tabbar.css'
 
 import { Menu, Icon } from 'antd';
 

@@ -19,7 +19,7 @@
   position: relative;
 }
 
-.input{
+.listInput{
   width: 350px!important;
   height: 400px!important;
   border: 1px solid #645656;
@@ -27,23 +27,23 @@
   position: absolute!important;
   z-index: 999!important;
 }
-.input .login-form{
+.listInput .login-form{
   padding-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.input .login-form Input{
+.listInput .login-form Input{
   width: 300px;
 }
-.input .login-form Button{
+.listInput .login-form Button{
   width: 100px;
   background: none;
   margin-right: 20px;
   border-radius: 20px;
 }
-.input .login-form Button:hover{
+.listInput .login-form Button:hover{
   background: rgba(0, 0, 0, 0.7);
 }
 .msg{

@@ -5,7 +5,8 @@ import {
     Login,
     UserInfo,
     UserList,
-    TodoList
+    TodoList,
+    WeiboRank
 } from "@pages"
 
 //layout 布局 是否有tabbar  
@@ -46,6 +47,16 @@ export const layoutRoute = [
                 component:AddBooks,
                 icon:"file-done",
                 name:"添加书籍",
+                // meta:{
+                //     requireAuth:true    //是否需要登录
+                // }
+            },
+            {
+                path:"/books/weiboRank",
+                key:"/books/weiboRank",
+                component:WeiboRank,
+                icon:"weibo-square",
+                name:"微博排行",
                 // meta:{
                 //     requireAuth:true    //是否需要登录
                 // }

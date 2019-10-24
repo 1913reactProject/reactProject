@@ -12,6 +12,11 @@ const BooksList = Loadable({
     loading:Loading
 })
 
+const WeiboRank = Loadable({
+    loader:()=>import("./books/weiboRank"),
+    loading:Loading
+})
+
 const Home = Loadable({
     loader:()=>import("./home"),
     loading:Loading
@@ -44,5 +49,6 @@ export {
     Login,
     UserInfo,
     UserList,
-    TodoList
+    TodoList,
+    WeiboRank
 }

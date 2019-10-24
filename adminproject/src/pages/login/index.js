@@ -22,7 +22,7 @@ import {withRouter}  from 'react-router-dom'
                 config = {{ pointColor: ' 255, 255, 255 ', lineColor:'255,255,255',pointR:2}}
                 style = {{ zIndex: 99 }} />
 
-                <div className="input">
+                <div className="listInput">
                     <div className="login-form">
                         <p>Administrator login</p>
                         <Form.Item>

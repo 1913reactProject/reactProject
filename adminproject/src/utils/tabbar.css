@@ -1,0 +1,32 @@
+ul{
+  overflow: hidden;
+}
+/* .ant-menu-item .nav-text{
+  color: white!important;
+} */
+.ant-menu-submenu-title span{
+  color: white;
+}
+.ant-menu-item-selected{
+  background: rgba(0, 0, 0, 0.2)!important;
+  font-weight: bold;
+}
+li li{
+  color: white;
+  background: rgba(0, 0, 0, 0.4)!important;
+  transition: all 0.3s ease-out!important;
+  overflow: hidden;
+}
+
+li li:hover{
+  transform: translateX(5px);
+}
+.ant-layout-sider-children{
+  background: url(./tabBg.jpg);
+  background-size: cover;
+  
+}
+.ant-layout-sider-children ul{
+  background: url(./tabBg.jpg);
+  background-size: cover;
+}

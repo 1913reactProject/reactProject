@@ -1,0 +1,54 @@
+.weiboRank{
+  width: 100%;
+  background: #f2f2f2;
+  margin: 0 auto;
+  /* display: flex; */
+
+}
+.weiboRank h4{
+  cursor: pointer;
+  height: 80px;
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 20px;
+  color: rgb(230, 170, 170);
+  transition: all 0.2s linear;
+}
+.weiboRank h4:hover{
+  /* transform: translateX(-10px); */
+  color:darkblue;
+
+}
+.weiboRank h4:active{
+  color: aliceblue;
+}
+.weiboRank .hotList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center ;
+}
+.weiboRank .hotList li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  list-style: none;
+  margin-bottom: 2px;
+  width: 600px;
+  height: 40px;
+  border-radius: 5px;
+  background: white;
+}
+.weiboRank .hotList li img{
+  width: 24px;
+  height: 24px;
+}
+.weiboRank .hotList li em{
+  font-weight: bold;
+}
+.weiboRank .hotList li span:hover{
+  cursor: pointer;
+  color: #999999;
+}
