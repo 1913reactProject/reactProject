@@ -31,7 +31,10 @@ const UserList = Loadable({
     loader:()=>import("./user/userList"),
     loading:Loading
 })
-
+const TodoList = Loadable({
+    loader:()=>import("./user/todoList"),
+    loading:Loading
+})
 
 
 export {
@@ -40,5 +43,6 @@ export {
     Home,
     Login,
     UserInfo,
-    UserList
+    UserList,
+    TodoList
 }

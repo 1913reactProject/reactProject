@@ -4,7 +4,8 @@ import {
     Home,
     Login,
     UserInfo,
-    UserList
+    UserList,
+    TodoList
 } from "@pages"
 
 //layout 布局 是否有tabbar  
@@ -74,6 +75,16 @@ export const layoutRoute = [
                 component:UserInfo,
                 icon:"message",
                 name:"个人信息",
+                // meta:{
+                //     requireAuth:true    //是否需要登录
+                // }
+            },
+            {
+                path:"/user/todoList",
+                key:"/user/todoList",
+                component:TodoList,
+                icon:"form",
+                name:"待办事项",
                 // meta:{
                 //     requireAuth:true    //是否需要登录
                 // }

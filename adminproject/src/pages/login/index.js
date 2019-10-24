@@ -11,7 +11,7 @@ import {withRouter}  from 'react-router-dom'
       };
       
     let  error = () => {
-    message.error('Incorrect username or password!');
+    message.error('Wrong account or password!');
     };
  class Login extends Component{
     
@@ -63,14 +63,17 @@ import {withRouter}  from 'react-router-dom'
     inp=(props) => {
         let v1 = this.refs.input1.state.value
         let v2 = this.refs.input2.state.value
-        Axios.post('http://10.60.14.137:3001/abc',)
+        
+        Axios.post('/abc',{
+            us:v1,
+            ps:v2
+        })
         .then( (data)=> {
-            data = {name:data.data[0].us,pass:data.data[0].ps}
-            if(v1 === data.name && v2 === data.pass) {
+            console.log(data)
+            if(data.data.err === true) {
             success()
             document.cookie = 'token=123'
             this.props.history.push('/home')
-            console.log(this)
             }else{
                 error()
             }

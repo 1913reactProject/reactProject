@@ -7,7 +7,6 @@
     "axios": "^0.19.0",
     "babel-plugin-import": "^1.12.2",
     "customize-cra": "^0.8.0",
-    "http-proxy-middleware": "^0.20.0",
     "js-cookie": "^2.2.1",
     "less": "^3.10.3",
     "qs": "^6.9.0",
@@ -31,6 +30,7 @@
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
   },
+  "proxy": "http://10.60.14.137:3001",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -49,5 +49,9 @@
   "description": "1. 安装脚手架 npm install create-react-app -g",
   "main": "config-overrides.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  
+  "devDependencies": {
+    "http-proxy-middleware": "^0.20.0"
+  }
 }
