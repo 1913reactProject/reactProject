@@ -7,15 +7,26 @@
 }
 .weiboRank h4{
   cursor: pointer;
-  height: 80px;
+  height: 70px;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 22px;
   padding: 20px;
+  padding-bottom: 10px;
   color: rgb(230, 170, 170);
   transition: all 0.2s linear;
 }
+.weiboRank>p{
+  font-size: 18px;
+  float: right;
+  margin-right: 200px;
+
+}
+.weiboRank>p:hover{
+  cursor: pointer;
+  color: skyblue;
+}
+
 .weiboRank h4:hover{
-  /* transform: translateX(-10px); */
   color:darkblue;
 
 }

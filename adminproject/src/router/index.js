@@ -4,9 +4,10 @@ import {
     Home,
     Login,
     UserInfo,
-    UserList,
+    UserAccount,
     TodoList,
-    WeiboRank
+    WeiboRank,
+    Message
 } from "@pages"
 
 //layout 布局 是否有tabbar  
@@ -71,11 +72,11 @@ export const layoutRoute = [
         name:"用户管理",
         children:[
             {
-                path:"/user/userList",
-                key:"/user/userList",
-                component:UserList,
+                path:"/user/userAccount",
+                key:"/user/userAccount",
+                component:UserAccount,
                 icon:"menu",
-                name:"用户列表",
+                name:"账号信息",
                 // meta:{
                 //     requireAuth:true    //是否需要登录
                 // }
@@ -96,6 +97,16 @@ export const layoutRoute = [
                 component:TodoList,
                 icon:"form",
                 name:"待办事项",
+                // meta:{
+                //     requireAuth:true    //是否需要登录
+                // }
+            },
+            {
+                path:"/user/message",
+                key:"/user/message",
+                component:Message,
+                icon:"form",
+                name:"留言反馈",
                 // meta:{
                 //     requireAuth:true    //是否需要登录
                 // }

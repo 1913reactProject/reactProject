@@ -17,7 +17,8 @@ import 'ant-design-pro/dist/ant-design-pro.css';
     render(){
         return(
             <div className="weiboRank">
-                    <h4 onClick={this.tab}>微博热搜排行</h4>
+                    <h4>微博热搜排行</h4>
+                    <p onClick={this.tab}>Change>></p>
 
                 {!this.state.flag?<ul className="hotList">
                     {this.state.hotList.map((item,index) => {

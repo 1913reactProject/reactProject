@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.userAccount{
+  width: 800px;
+  /* background: #dfdfdf; */
+  margin: 0 auto;
+  border: 1px solid #dfdfdf;
+}
+.userAccount h4{
+  height: 30px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: #dfdfdf;
+
+}
+.userAccountFans{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.userAccountFans li {
+  list-style: none;
+  width: 24%;
+  height: 180px;
+  /* background: red; */
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start
+}
+.userAccountFans li span{
+  margin-bottom: 10px;
+}
+.userAccountFans li::before{
+  content: '';
+  width: 1px;
+  height: 140px;
+  background: #dfdfdf;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.userAccountFans li:nth-child(4n)::before{
+  width: 0;
+}

@@ -32,10 +32,16 @@ const UserInfo = Loadable({
     loading:Loading
 })
 
-const UserList = Loadable({
-    loader:()=>import("./user/userList"),
+const UserAccount = Loadable({
+    loader:()=>import("./user/userAccount"),
     loading:Loading
 })
+
+const Message = Loadable({
+    loader:()=>import("./user/message"),
+    loading:Loading
+})
+
 const TodoList = Loadable({
     loader:()=>import("./user/todoList"),
     loading:Loading
@@ -48,7 +54,8 @@ export {
     Home,
     Login,
     UserInfo,
-    UserList,
+    UserAccount,
     TodoList,
-    WeiboRank
+    WeiboRank,
+    Message
 }

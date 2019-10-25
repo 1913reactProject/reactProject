@@ -1,0 +1,53 @@
+.userInfo{
+  width: 100%;
+  background: #f0f2f5;
+
+}
+.input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.userInfo textarea{
+  width: 70%;
+  min-width: 400px;
+  height: 80px;
+  margin: 10px;
+  border: 1px solid #dfdfdf;
+  padding: 10px;
+}
+
+.messageList{
+  margin-top: 10px;
+  padding: 20px 80px;
+  border-top: 1px solid #dfdfdf;
+}
+.ant-comment-content{
+  border-bottom: 1px solid #dfdfdf;
+}
+.ant-comment-actions{
+  text-align: left;
+}
+.ant-comment-content-detail p{
+  text-align: left;
+  text-indent:2em;
+}
+.delItem{
+  border: #dfdfdf;
+  background: #eeeeee;
+  border-radius: 10px;
+  width: 60px;
+  height: 25px;
+  font-size: 14px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline:none;
+}
+.delItem:hover{
+  background: #999999;
+}
