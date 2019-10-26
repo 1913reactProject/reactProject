@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import { Layout, Menu,Badge, Icon } from 'antd';
+import { Layout, Menu,Badge,Dropdown, Icon } from 'antd';
 
 import renderTabbar from "@utils/renderTabbar"
 import {layoutRoute} from "@router"
@@ -8,8 +8,21 @@ import './index.css'
 import {withRouter} from "react-router-dom"
 
 const { Header, Content, Footer, Sider } = Layout;
-
-
+const menu = (
+    <Menu>
+      <Menu.Item>
+        <a href="#"  rel="noopener noreferrer" onClick={() => {user()}} >
+          退出登录
+        </a>
+      </Menu.Item>
+      
+    </Menu>
+  )
+  function user() {
+    console.log(1)
+    document.cookie='token'+'='+''
+    
+    }
 class LayoutComponent extends Component {
     render() {
         console.log(this.props.children)
@@ -40,7 +53,12 @@ class LayoutComponent extends Component {
                                 <Icon type="notification" />
                             </Badge>
                             <span>Lee</span>
-                            <img  src="./head.jpg" alt="" onMouseEnter={() => {this.user()}}/>
+
+                            <Dropdown overlay={menu} placement="bottomCenter">
+                                <img  src="./head.jpg" alt="" />
+                            </Dropdown>
+                           
+                            
                         </Header> 
                         <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
                             <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
@@ -63,9 +81,7 @@ class LayoutComponent extends Component {
         // console.log(this.props)
         this.props.history.push(key)
     }
-    user(){
-        console.log(1)
-    }
+    
 
 
 
