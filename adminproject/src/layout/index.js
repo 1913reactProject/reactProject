@@ -40,7 +40,7 @@ class LayoutComponent extends Component {
                                 <Icon type="notification" />
                             </Badge>
                             <span>Lee</span>
-                            <img  src="./head.jpg" alt=""/>
+                            <img  src="./head.jpg" alt="" onMouseEnter={() => {this.user()}}/>
                         </Header> 
                         <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
                             <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
@@ -62,6 +62,9 @@ class LayoutComponent extends Component {
         // console.log(key)
         // console.log(this.props)
         this.props.history.push(key)
+    }
+    user(){
+        console.log(1)
     }
 
 

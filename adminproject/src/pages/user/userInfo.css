@@ -5,4 +5,11 @@
 .list1{
   height: 54px;
 }
+.change{
+  margin-top: 20px;
+}
 
+.btnSub{
+  margin-right: 50%;
+  transform: translateX(50%);
+}

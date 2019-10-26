@@ -17,7 +17,7 @@ import {withRouter}  from 'react-router-dom'
     
     render(){
         return(
-            <div className="particle-network-animation">
+            <div className="particle-network-animation loginBox">
                 <ReactCanvasNest className = 'canvasNest' 
                 config = {{ pointColor: ' 255, 255, 255 ', lineColor:'255,255,255',pointR:2}}
                 style = {{ zIndex: 99 }} />
@@ -64,7 +64,7 @@ import {withRouter}  from 'react-router-dom'
         let v1 = this.refs.input1.state.value
         let v2 = this.refs.input2.state.value
         
-        Axios.post('/login/abc',{
+        Axios.post('/abc',{
             us:v1,
             ps:v2
         })

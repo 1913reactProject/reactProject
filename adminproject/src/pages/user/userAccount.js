@@ -19,6 +19,7 @@ export default class UserList extends Component{
     render(){
         return(
             <div className="userAccount">
+                <h3>微博账户信息</h3>
                    <h4>昨日关键指标</h4>
                <ul className="userAccountFans">
                    <li>
