@@ -15,7 +15,11 @@ export default class UserInfo extends Component{
             action: null,
         }
     }
-    
+    confirm(index) {
+        this.del(index)
+        message.info('删除成功！！！')
+
+      }
     render(){
         const { likes,dislikes, action } = this.state;
         
@@ -41,8 +45,8 @@ export default class UserInfo extends Component{
                 </Tooltip>
                 <span style={{ paddingLeft: 8, cursor: 'auto' }}>{dislikes}</span>
                 </span>,
-            <span key="comment-basic-reply-to" onClick={() => {this.del()}}
-            >Reply to</span>
+            // <span key="comment-basic-reply-to" onClick={() => {this.del()}}
+            // >Reply to</span>
           ]
         return(
             <div className="userInfo">
@@ -68,8 +72,8 @@ export default class UserInfo extends Component{
                                 datetime={
                                 <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
                                     <span>{moment().fromNow()}</span>
-                                    <Popconfirm placement="top" title='你确定要删除该留言？'  okText="Yes" cancelText="No">
-                                        <button className="delItem" onClick={() => {this.del(index)}}>删除</button>
+                                    <Popconfirm placement="top" title='你确定要删除该留言？' onConfirm={() => {this.confirm(index)}} okText="Yes" cancelText="No">
+                                        <button className="delItem" onClick={() => {}}>删除</button>
                                     </Popconfirm>
                                     
                                 </Tooltip>

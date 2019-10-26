@@ -1,5 +1,5 @@
 import {
-    AddBooks,
+    WeiboMsg,
     BooksList,
     Home,
     Login,
@@ -30,24 +30,24 @@ export const layoutRoute = [
         key:"/books",
         // component:Home,    //注意这里不需要组件，，
         icon:"read",
-        name:"书籍管理",
+        name:"微博管理",
         children:[
             {
                 path:"/books/booksList",
                 key:"/books/booksList",
                 component:BooksList,
                 icon:"profile",
-                name:"书籍列表",
+                name:"热门微博",
                 // meta:{
                 //     requireAuth:true    //是否需要登录
                 // }
             },
             {
-                path:"/books/addBooks",
-                key:"/books/addBooks",
-                component:AddBooks,
+                path:"/books/weiboMsg",
+                key:"/books/weiboMsg",
+                component:WeiboMsg,
                 icon:"file-done",
-                name:"添加书籍",
+                name:"流量统计",
                 // meta:{
                 //     requireAuth:true    //是否需要登录
                 // }

@@ -2,8 +2,8 @@ import Loadable from "react-loadable"
 import Loading from "@common/loading"
 
 //路由懒加载
-const AddBooks = Loadable({
-    loader:()=>import("./books/addBooks"),
+const WeiboMsg = Loadable({
+    loader:()=>import("./books/weiboMsg"),
     loading:Loading
 })
 
@@ -49,7 +49,7 @@ const TodoList = Loadable({
 
 
 export {
-    AddBooks,
+    WeiboMsg,
     BooksList,
     Home,
     Login,

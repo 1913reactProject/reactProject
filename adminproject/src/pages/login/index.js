@@ -64,7 +64,7 @@ import {withRouter}  from 'react-router-dom'
         let v1 = this.refs.input1.state.value
         let v2 = this.refs.input2.state.value
         
-        Axios.post('/abc',{
+        Axios.post('/login/abc',{
             us:v1,
             ps:v2
         })
