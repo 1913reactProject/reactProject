@@ -72,6 +72,7 @@
   margin-bottom: 10px;
 }
 .weibolist li div span{
+  text-align: left;
   display: block;
   width: 600px;
   margin-bottom: 10px;

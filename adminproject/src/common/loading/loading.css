@@ -1,0 +1,52 @@
+.loading{
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  animation: move 2s linear infinite;
+  
+}
+.loading div{
+  float: left;
+}
+
+.box1{
+  width: 200px;
+  height: 200px;
+  border-bottom:100px solid orange;
+  border-left: 100px solid transparent;
+}
+.box2{
+  width: 200px;
+  height: 200px;
+  border-left: 100px solid blue;
+  border-top: 100px solid transparent;
+  
+}
+.box3{
+  width: 200px;
+  height: 200px;
+  border-right: 100px solid yellow;
+  border-bottom: 100px solid transparent;
+}
+.box4{
+  width: 200px;
+  height: 200px;
+  border-top: 100px solid green;
+  border-right: 100px solid transparent;
+}
+@keyframes move{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse{
+  from{
+    transform:scale(0.5);
+  }
+  to{
+    transfrom:scale(1.5);
+  }
+}

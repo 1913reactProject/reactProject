@@ -10,6 +10,7 @@ export default class Home extends Component{
         return(
             <div className="homeSwiper">
                 <h1>My Project</h1>
+                <a href= "http://10.60.14.137:8080/" target="blank" className="mobile">点击进去手机版微博>></a>
                 <div id="jsi-flying-fish-container" className="container"></div>
                 {/* <Carousel autoplay>
                     <div>
